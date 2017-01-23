@@ -3,8 +3,9 @@ Make sure your previous C# project is closed.
 Then open this project and press start to run project in interactive mode.
 To exit interactive mode press Ctrl+C
 
-To run project in File mode of operation Create File inside directory C:\test\paramater.txt
-In SmallerProject folder file program.cs change fileModeOfOperation=false;
+To run project in file mode of operation create file paramater.txt inside directory C:\test\
+ie) C:\test\paramater.txt
+In SmallerProject folder file program.cs On line 40 change the boolean fileModeOfOperation to false;
 
 in file paramater.txt please write a list of algebraic equations to solve in each line such as: 
 x^2+3.5xy+y=y^2-xy+y
