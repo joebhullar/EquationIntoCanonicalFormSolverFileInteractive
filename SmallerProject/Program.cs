@@ -16,8 +16,8 @@ using System.IO;
 //                 Solution:  (x^2)+3(x^2)(y^2)-(y^2)-4xy= 0 
 //
 //This program also has two seperate modes of operation. It has a File mode and a Console Interactive mode.
-//SET line 40 bool fileModeOfOperation = true For File Mode
-//SET line 40 bool fileModeOfOperation = false For Interactive Mode
+//SET line 40 bool checkForFileModeOfOperation = true For File Mode
+//SET line 40 bool checkForFileModeOfOperation = false For Interactive Mode
 //For File mode:*****************************************************************************
 //               input file equations are in this directory and file "C:\test\paramater.txt"
 //                *the input file, paramater.txt, contains lines with equations. 
@@ -37,22 +37,22 @@ namespace SmallerProject
         static void Main(string[] args) //static means you can have only one instance of it
         {
             //Switch between file and interactive mode of operation
-            bool fileModeOfOperation = false;
+            bool checkForFileModeOfOperation = false;
             ScanningAlgorithm obj = new SmallerProject.ScanningAlgorithm(); //create a new object of scannerblock to use functions to scan blocks of data 
-            int inputindexOfStrEqn = 0; //index of string entries for fileModeOfOperation. This is needed here because it increments at the end of reading a complete eqn input ONLY in filemode with more than one entry.
+            int inputIndexOfStrEqn = 0; //index of string entries for checkForFileModeOfOperation. This is needed here because it increments at the end of reading a complete eqn input ONLY in fileModeOfOperation with more than one entry.
             OperationMode methodOfReadingInputAndWritingOutput = new OperationMode(); //Instantiating OperationMode class to use ModeofOperation function which will return lineCount. This is needed to determine File/Interactive Mode.
             //this integer lineCount is responsible for telling us how many times we must go through an equation. In File Mode, it returns # of lines for inputeqn. For console, it goes in an infine loop until user hits Ctrl+C to Exit console.
-            int lineCount = methodOfReadingInputAndWritingOutput.modeOfOperation(fileModeOfOperation);// Loops through Equation Entries.
-            while (inputindexOfStrEqn < lineCount)//for each line of input equation (whether it's for FileMode or Interactive Mode)
+            int lineCount = methodOfReadingInputAndWritingOutput.modeOfOperation(checkForFileModeOfOperation);// Loops through Equation Entries.
+            while (inputIndexOfStrEqn < lineCount)//for each line of input equation (whether it's for fileModeOfOperation or Interactive Mode)
             {
                 //Put the input Algebraic string (from File or Interactive Console, depending on mode of operation) into string written text
-                string writtentext = methodOfReadingInputAndWritingOutput.valueOfInputEqnString(fileModeOfOperation, inputindexOfStrEqn);
+                string writtenText = methodOfReadingInputAndWritingOutput.valueOfInputEquationString(checkForFileModeOfOperation, inputIndexOfStrEqn);
                 //Pass the original equation into function which returns output string in Canonical form of StringBuilder type.
                 equationStringToCanonicalForm eqnStrToCanonical = new equationStringToCanonicalForm();
-                //outputeqn has the canonical form of the equation. StringBuilder is used because it is easier to append strings with string builder.  
-                StringBuilder outputeqn =eqnStrToCanonical.inputEquationStringToCanonicalString(writtentext);
+                //outputEqn has the canonical form of the equation. StringBuilder is used because it is easier to append strings with string builder.  
+                StringBuilder outputEqn =eqnStrToCanonical.inputEquationStringToCanonicalString(writtenText);
                 //Write Solution String to Output (Either Console or File depending on operation)
-                methodOfReadingInputAndWritingOutput.WriteOutMode(outputeqn, fileModeOfOperation, ref inputindexOfStrEqn, lineCount);
+                methodOfReadingInputAndWritingOutput.WriteOutMode(outputEqn, checkForFileModeOfOperation, ref inputIndexOfStrEqn, lineCount);
             }
         }
     }

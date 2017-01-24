@@ -5,3 +5,10 @@ C:\Users\TamTon\Documents\Visual Studio 2015\Projects\SmallerProject\NUnitTestPr
 C:\Users\TamTon\Documents\Visual Studio 2015\Projects\SmallerProject\NUnitTestProject1\obj\Debug\NUnitTestProject1.csprojResolveAssemblyReference.cache
 C:\Users\TamTon\Documents\Visual Studio 2015\Projects\SmallerProject\NUnitTestProject1\obj\Debug\NUnitTestProject1.dll
 C:\Users\TamTon\Documents\Visual Studio 2015\Projects\SmallerProject\NUnitTestProject1\obj\Debug\NUnitTestProject1.pdb
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\bin\Debug\NUnitTestProject1.dll
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\bin\Debug\NUnitTestProject1.pdb
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\bin\Debug\SmallerProject.exe
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\bin\Debug\SmallerProject.pdb
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\obj\Debug\NUnitTestProject1.csprojResolveAssemblyReference.cache
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\obj\Debug\NUnitTestProject1.dll
+C:\Users\TamTon\Documents\TestingVSProject\EquationIntoCanonicalFormSolverFileInteractive\NUnitTestProject1\obj\Debug\NUnitTestProject1.pdb

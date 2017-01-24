@@ -13,21 +13,18 @@ namespace SmallerProject
         // This function takes in two sets of lists of algebraic equations. One for the LHS one for the RHS.
         public void addCoefficients(List<AlgebraicBlockOfEqn.blockOfAlgebra> myRightHandSideListofBlockAlgebra, List<AlgebraicBlockOfEqn.blockOfAlgebra> myLeftHandSideListofBlockAlgebra)
         {
-            foreach (var rblockOfAlgorithm in myRightHandSideListofBlockAlgebra) //for every block of algorithm on the RHS of the EQN
+            foreach (var rightHandSideBlockOfAlgorithm in myRightHandSideListofBlockAlgebra) //for every block of algorithm on the RHS of the EQN
             {
-                var rlist = rblockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary.Keys.ToList();//put that corresponding block of algorithm's dictionary into a list
-                rlist.Sort();//SORTS THAT SAME LIST OF THAT DICTIONARY OF ITS KEY VARIABLES
-                foreach (var leftlistItem in myLeftHandSideListofBlockAlgebra)
+                var rightHandSideOfList = rightHandSideBlockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary.Keys.ToList();//put that corresponding block of algorithm's dictionary into a list
+                rightHandSideOfList.Sort();//SORTS THAT SAME LIST OF THAT DICTIONARY OF ITS KEY VARIABLES
+                foreach (var leftHandSideOfListItem in myLeftHandSideListofBlockAlgebra)
                 {
-                    var leftlist = leftlistItem.dictionaryForOneBlock.varAndExponentDictionary.Keys.ToList();//This is Essentially EACH Block of 
-                    if (rblockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary != null)
-                        {//Bool Condition for checking if either of the LHS Or RHS side of equations have matching dictionaries.
-                        bool equal = (rblockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary).SequenceEqual(leftlistItem.dictionaryForOneBlock.varAndExponentDictionary); 
-                        if (equal)//if variables and those variable's corresponding powers match Then add the coefficient a's together.
+                    var leftHandSideOfList = leftHandSideOfListItem.dictionaryForOneBlock.varAndExponentDictionary.Keys.ToList();//This is Essentially EACH Block of 
+                    if (rightHandSideBlockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary != null && (rightHandSideBlockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary).SequenceEqual(leftHandSideOfListItem.dictionaryForOneBlock.varAndExponentDictionary)) 
                         {
-                            leftlistItem.a = leftlistItem.a + rblockOfAlgorithm.a; //add right side of a to the left side.
-                            rblockOfAlgorithm.a = 0;//since we added right to left, we no longer have a value for a
-                            rblockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary = null;
+                            leftHandSideOfListItem.a = leftHandSideOfListItem.a + rightHandSideBlockOfAlgorithm.a; //add right side of a to the left side.
+                            rightHandSideBlockOfAlgorithm.a = 0;//since we added right to left, we no longer have a value for a
+                            rightHandSideBlockOfAlgorithm.dictionaryForOneBlock.varAndExponentDictionary = null;
                         }
                     }
                 }
@@ -35,4 +32,4 @@ namespace SmallerProject
 
         }
     }
-}
+

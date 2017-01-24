@@ -1,8 +1,2 @@
-"# EquationSolverFileAndInteractiveMode" 
-"# EquationSolverFileAndInteractiveMode" 
-"# EquationSolverFileAndInteractiveMode" 
-"# FileAndInteractiveModeEquationSolver" 
-"# EquationSolverFileAndInteractiveMode" 
-"# EquationIntoCanonicalFormSolverFileInteractive" 
-"# EquationIntoCanonicalFormSolverFileInteractive" 
+
 "# EquationIntoCanonicalFormSolverFileInteractive" 

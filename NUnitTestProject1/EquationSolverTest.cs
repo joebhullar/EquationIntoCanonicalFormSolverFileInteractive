@@ -17,9 +17,9 @@ namespace NUnitTestProject1
             string EqnOneSolun = "Solution:  (x^2)+4.5xy-(y^2)= 0 \n\n";
             //Act
             TestEqnChecker CheckTestEqn = new TestEqnChecker();
-            string comparpurpose = CheckTestEqn.TestEquationChecker(EqnOneIn);
+            string comparisonStr = CheckTestEqn.TestEquationChecker(EqnOneIn);
             //Assert
-            Assert.AreEqual(EqnOneSolun, comparpurpose);
+            Assert.AreEqual(EqnOneSolun, comparisonStr);
         }
         [TestMethod]
         public void Test_EqnTwoChecker()
@@ -29,9 +29,9 @@ namespace NUnitTestProject1
             string EqnOneSolun = "Solution:  (x^2)+3(x^2)(y^2)-(y^2)-4xy= 0 \n\n";
             //Act
             TestEqnChecker CheckTestEqn = new TestEqnChecker();
-            string comparpurpose = CheckTestEqn.TestEquationChecker(EqnOneIn);
+            string comparisonStr = CheckTestEqn.TestEquationChecker(EqnOneIn);
             //Assert
-            Assert.AreEqual(EqnOneSolun, comparpurpose);
+            Assert.AreEqual(EqnOneSolun, comparisonStr);
 
         }
         [TestMethod]
@@ -42,9 +42,9 @@ namespace NUnitTestProject1
             string EqnOneSolun = "Solution:  (x^4)+3(x^2)(y^2)z-2(y^2)-0.5x(y^2)+1.5(x^3)y-4xy= 0 \n\n";
             //Act
             TestEqnChecker CheckTestEqn = new TestEqnChecker();
-            string comparpurpose = CheckTestEqn.TestEquationChecker(EqnOneIn);
+            string comparisonStr = CheckTestEqn.TestEquationChecker(EqnOneIn);
             //Assert
-            Assert.AreEqual(EqnOneSolun, comparpurpose);
+            Assert.AreEqual(EqnOneSolun, comparisonStr);
         }
         [TestMethod]
         public void Test_EqnFourChecker()
@@ -54,9 +54,9 @@ namespace NUnitTestProject1
             string EqnOneSolun = "Solution:  (x^2)(y^3)z-4(x^2)(z^3)+(z^234)+x= 0 \n\n";
             //Act
             TestEqnChecker CheckTestEqn = new TestEqnChecker();
-            string comparpurpose = CheckTestEqn.TestEquationChecker(EqnOneIn);
+            string comparisonStr = CheckTestEqn.TestEquationChecker(EqnOneIn);
             //Assert
-            Assert.AreEqual(EqnOneSolun, comparpurpose);
+            Assert.AreEqual(EqnOneSolun, comparisonStr);
         }
         [TestMethod]
         public void Test_EqnFiveChecker()
@@ -66,9 +66,9 @@ namespace NUnitTestProject1
             string EqnOneSolun = "Solution:  1.1(x^2)z-0.4y= 0 \n\n";
             //Act
             TestEqnChecker CheckTestEqn = new TestEqnChecker();
-            string comparpurpose = CheckTestEqn.TestEquationChecker(EqnOneIn);
+            string comparisonStr = CheckTestEqn.TestEquationChecker(EqnOneIn);
             //Assert
-            Assert.AreEqual(EqnOneSolun, comparpurpose);
+            Assert.AreEqual(EqnOneSolun, comparisonStr);
         }
         [TestMethod]
         public void Test_EqnSixChecker()
@@ -78,9 +78,9 @@ namespace NUnitTestProject1
             string EqnOneSolun = "Solution:  9.4x-7.1y-10.03xyz+9.9(x^2)= 0 \n\n";
             //Act
             TestEqnChecker CheckTestEqn = new TestEqnChecker();
-            string comparpurpose = CheckTestEqn.TestEquationChecker(EqnOneIn);
+            string comparisonStr = CheckTestEqn.TestEquationChecker(EqnOneIn);
             //Assert
-            Assert.AreEqual(EqnOneSolun, comparpurpose);
+            Assert.AreEqual(EqnOneSolun, comparisonStr);
         }
 
     }
